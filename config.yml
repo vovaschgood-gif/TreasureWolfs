@@ -1,0 +1,47 @@
+# Настройки TreasureWolf
+
+settings:
+  update_radius: 95
+  dead_radius: 25
+  fishy_place_min_distance: 45
+
+messages:
+  treasure_found: "&aВаш питомец нашел клад!"
+  treasure_not_found: "&cВаш питомец еще не может найти клад"
+  wolf_cooldown: "&cВаш питомец устал"
+  chest_opened: "&6Выкопанный сундук"
+
+allowed_biomes:
+  - FOREST
+  - TAIGA
+  - DARK_FOREST
+  - BIRCH_FOREST
+  - DESERT
+  - BEACH
+  - JUNGLE
+  - BAMBOO_JUNGLE
+
+# Кулдауны на поиск клада (в минутах)
+cooldowns:
+  # Использовать общий кулдаун для всех биомов (true/false)
+  # Если true - используется только global, биомы игнорируются
+  use_global: false
+
+  # Общий кулдаун для всех биомов (если use_global: true)
+  global:
+    min: 5
+    max: 15
+
+  # Кулдауны по биомам (если use_global: false)
+  DESERT:
+    min: 2
+    max: 10
+  JUNGLE:
+    min: 5
+    max: 20
+  BEACH:
+    min: 2
+    max: 20
+  default:
+    min: 5
+    max: 20
